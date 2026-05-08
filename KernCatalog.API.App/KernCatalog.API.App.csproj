@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <None Remove="app_settings_schemas\create_log_table.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tn.Sdk.Application.Web" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Application.Web.RestApi" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Localization" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Logger.InMemory" />
+    <PackageReference Include="Tn.Sdk.Logger.PostgreSql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KernCatalog.Api.Rest\KernCatalog.Api.Rest.csproj" />
+    <ProjectReference Include="..\KernCatalog.Infra.PostgreSql\KernCatalog.Infra.PostgreSql.csproj" />
+  </ItemGroup>
+
+	<Target Name="_ResolveCopyLocalNuGetPkgXmls" AfterTargets="ResolveReferences">
+		<ItemGroup>
+			<!-- Copy XML files from all PackageReferences to output dir -->
+			<ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="&#xD;&#xA;				'%(ReferenceCopyLocalPaths.NuGetPackageId)'!='' &#xD;&#xA;				and Exists('%(RootDir)%(Directory)%(Filename).xml') &#xD;&#xA;				and $([System.Text.RegularExpressions.Regex]::IsMatch(%(Filename), 'Tn\.Sdk\.'))" />
+		</ItemGroup>
+	</Target>
+	
+
+</Project>

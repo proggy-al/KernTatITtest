@@ -1,0 +1,230 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "NameStyle": {
+            "type": [ "string", "null" ],
+            "enum": [
+                "None",
+                "SnakeCase",
+                "LowerCamelCase",
+                "UpperCamelCase"
+            ],
+            "title": "Стиль написания наименования.",
+            "description": "Наименование сущности будет преобразовано в соответствии с указанным стилем."
+        },
+        "XmlComment": {
+            "type": "object",
+            "title": "XML коментарий.",
+            "description": "Настройки формирования XML коментария.",
+            "properties": {
+                "RemarksSingleLine": {
+                    "type": [ "boolean", "null" ],
+                    "title": "Remarks в одну строку.",
+                    "description": "Раздел Remarks будет сформирован в одной строке."
+                },
+                "SummarySingleLine": {
+                    "type": [ "boolean", "null" ],
+                    "title": "Summary в одну строку.",
+                    "description": "Раздел Summary будет сформирован в одной строке."
+                }
+            }
+        },
+        "CodeGenField": {
+            "type": "object",
+            "title": "Поле.",
+            "description": "Настройки формирования полей сущности.",
+            "properties": {
+                "NameStyle": {
+                    "$ref": "#/definitions/NameStyle",
+                    "title": "Стиль написания наименования.",
+                    "description": "Наименование будет преобразовано в соответствии с указанным стилем."
+                },
+                "NamePrefix": {
+                    "type": [ "string", "null" ],
+                    "title": "Префикс имени.",
+                    "description": "Текст который будет добавлен к имени спереди."
+                },
+                "NameSufix": {
+                    "type": [ "string", "null" ],
+                    "title": "Суфикс имени.",
+                    "description": "Текст который будет добавлен к имени сзади."
+                },
+                "XmlComment": {
+                    "$ref": "#/definitions/XmlComment",
+                    "title": "XML коментарий..",
+                    "description": "Настройки формирования XML коментария."
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGenProperty": {
+            "type": "object",
+            "title": "Свойство.",
+            "description": "Настройки формирования свойств сущности.",
+            "properties": {
+                "NameStyle": {
+                    "$ref": "#/definitions/NameStyle",
+                    "title": "Стиль написания наименования.",
+                    "description": "Наименование будет преобразовано в соответствии с указанным стилем."
+                },
+                "NamePrefix": {
+                    "type": [ "string", "null" ],
+                    "title": "Префикс имени.",
+                    "description": "Текст который будет добавлен к имени спереди."
+                },
+                "NameSufix": {
+                    "type": [ "string", "null" ],
+                    "title": "Суфикс имени.",
+                    "description": "Текст который будет добавлен к имени сзади."
+                },
+                "XmlComment": {
+                    "$ref": "#/definitions/XmlComment",
+                    "title": "XML коментарий..",
+                    "description": "Настройки формирования XML коментария."
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGenMethod": {
+            "type": "object",
+            "title": "Метод.",
+            "description": "Настройки формирования методов сущности.",
+            "properties": {
+                "NameStyle": {
+                    "$ref": "#/definitions/NameStyle",
+                    "title": "Стиль написания наименования.",
+                    "description": "Наименование будет преобразовано в соответствии с указанным стилем."
+                },
+                "NamePrefix": {
+                    "type": [ "string", "null" ],
+                    "title": "Префикс имени.",
+                    "description": "Текст который будет добавлен к имени спереди."
+                },
+                "NameSufix": {
+                    "type": [ "string", "null" ],
+                    "title": "Суфикс имени.",
+                    "description": "Текст который будет добавлен к имени сзади."
+                },
+                "XmlComment": {
+                    "$ref": "#/definitions/XmlComment",
+                    "title": "XML коментарий..",
+                    "description": "Настройки формирования XML коментария."
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGenConstructor": {
+            "type": "object",
+            "title": "Метод.",
+            "description": "Настройки формирования конструкторов сущности.",
+            "properties": {
+                "NameStyle": {
+                    "$ref": "#/definitions/NameStyle",
+                    "title": "Стиль написания наименования.",
+                    "description": "Наименование будет преобразовано в соответствии с указанным стилем."
+                },
+                "NamePrefix": {
+                    "type": [ "string", "null" ],
+                    "title": "Префикс имени.",
+                    "description": "Текст который будет добавлен к имени спереди."
+                },
+                "NameSufix": {
+                    "type": [ "string", "null" ],
+                    "title": "Суфикс имени.",
+                    "description": "Текст который будет добавлен к имени сзади."
+                },
+                "XmlComment": {
+                    "$ref": "#/definitions/XmlComment",
+                    "title": "XML коментарий..",
+                    "description": "Настройки формирования XML коментария."
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGenType": {
+            "type": "object",
+            "title": "Тип.",
+            "description": "Настройки формирования типа.",
+            "properties": {
+                "NameStyle": {
+                    "$ref": "#/definitions/NameStyle",
+                    "title": "Стиль написания наименования.",
+                    "description": "Наименование будет преобразовано в соответствии с указанным стилем."
+                },
+                "NamePrefix": {
+                    "type": [ "string", "null" ],
+                    "title": "Префикс имени.",
+                    "description": "Текст который будет добавлен к имени спереди."
+                },
+                "NameSufix": {
+                    "type": [ "string", "null" ],
+                    "title": "Суфикс имени.",
+                    "description": "Текст который будет добавлен к имени сзади."
+                },
+                "XmlComment": {
+                    "$ref": "#/definitions/XmlComment",
+                    "title": "XML коментарий..",
+                    "description": "Настройки формирования XML коментария."
+                },
+                "Field": {
+                    "$ref": "#/definitions/CodeGenField"
+                },
+                "Property": {
+                    "$ref": "#/definitions/CodeGenProperty"
+                },
+                "Method": {
+                    "$ref": "#/definitions/CodeGenMethod"
+                },
+                "Constructor": {
+                    "$ref": "#/definitions/CodeGenConstructor"
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGen": {
+            "type": "object",
+            "title": "Сущность.",
+            "description": "Настройки формирования сущности.",
+            "properties": {
+                "Type": {
+                    "$ref": "#/definitions/CodeGenType",
+                    "title": "Опции генерации типа.",
+                    "description": "Опции генерации типа."
+                },
+                "Namespace": {
+                    "type": "string",
+                    "title": "Пространство имен в коде C# для сущности.",
+                    "description": "Пространство имен в коде C# для сущности. Допускаются макросы: {EntityName}, {TypeName}, {TableSchema}."
+                },
+                "FileNamePattern": {
+                    "type": [ "string", "null" ],
+                    "title": "Шаблон имени выходного генерируемого файла для сущности.",
+                    "description": "Шаблон имени выходного файла для сущности. Допускаются макросы: {EntityName}, {TypeName}, {Namespace}, {TableSchema}.",
+                    "default": "{TypeName}.gen.cs"
+                },
+                "ManualFileNamePattern": {
+                    "type": [ "string", "null" ],
+                    "title": "Шаблон имени выходного ручного файла для сущности.",
+                    "description": "Шаблон имени выходного файла для сущности. Допускаются макросы: {EntityName}, {TypeName}, {Namespace}, {TableSchema}.",
+                    "default": "{TypeName}.cs"
+                },
+                "PkPropNotNull": {
+                    "type": "boolean",
+                    "description": "Признак обязательности значения свойства для первичного ключа.",
+                    "default": true
+                },
+                "AncestorsAuto": {
+                    "type": "boolean",
+                    "description": "Признак автоматического определения предков.",
+                    "default": true
+                },
+                "Ancestors": {
+                    "type": "array",
+                    "description": "Список предков.",
+                    "items": [ { "type": "string" } ]
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

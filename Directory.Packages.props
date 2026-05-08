@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Tn.Sdk.Application.Web.RestApi" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Api.Rest" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Core" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Dal" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Dal.Mapper" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Dal.PostgresEf" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Dal.PostgreSql" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Export" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Generator" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Localization" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Logger.InMemory" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.Logger.PostgreSql" Version="0.1.9.296" />
+    <PackageVersion Include="Tn.Sdk.UseCase" Version="0.1.9.296" />
+  </ItemGroup>
+</Project>

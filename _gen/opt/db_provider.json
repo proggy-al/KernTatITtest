@@ -1,0 +1,8 @@
+{
+    "Provider": {
+        "Type": "PostgreSQL",
+      "Settings": {
+        "ConnectionString": "Host=localhost;Port=5432;Database=postgres;Search Path=localization;UserID=postgres;Password=postgres;"
+      }
+    }
+}

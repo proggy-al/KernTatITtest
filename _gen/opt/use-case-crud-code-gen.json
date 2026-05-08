@@ -1,0 +1,64 @@
+{
+    "$schema": "../schema/use-case-operation-gen-options-schema.json",
+    "Entities": [
+        {
+            "Name": "Ngdu",
+            "TypeName": "NgduEntity",
+            "Operations": [ "Create", "CreateMany", "Delete", "Read", "ReadMany", "UpdateMany", "Update", "DeleteMany" ]
+        },
+        {
+            "Name": "Oilfield",
+            "TypeName": "OilfieldEntity",
+            "Operations": [ "Create", "CreateMany", "Delete", "Read", "ReadMany", "UpdateMany", "Update", "DeleteMany" ]
+        },
+        {
+            "Name": "Oilsquare",
+            "TypeName": "OilsquareEntity",
+          "Operations": [ "Create", "CreateMany", "Delete", "Read", "ReadMany", "UpdateMany", "Update", "DeleteMany" ]
+        },
+        {
+            "Name": "Ubr",
+            "TypeName": "UbrEntity",
+            "Operations": [ "Create", "CreateMany", "Delete", "Read", "ReadMany", "UpdateMany", "Update", "DeleteMany" ]
+        },
+        {
+            "Name": "Welldata",
+            "TypeName": "WelldataEntity",
+            "Operations": [ "Create", "CreateMany", "Delete", "Read", "ReadMany", "UpdateMany", "Update", "DeleteMany" ]
+        }
+    ],
+    "CodeGen": {
+        "Configuration": {
+            "Type": {
+                "NameSufix": "Configuration"
+            },
+            "FileNamePattern": "{EntityName}/{TypeName}.cs",
+            "Namespace": "KernCatalog.UseCase",
+            "Skip": true
+        },
+        "Operation": {
+            "Type": {
+                "NamePrefix": "",
+                "NameSufix": ""
+            },
+            "FileNamePattern": "{EntityName}/Operation/{EntityName}Crud.cs",
+            "Namespace": "KernCatalog.UseCase"
+        },
+        "OperationHandler": {
+            "Type": {
+                "NamePrefix": "",
+                "NameSufix": "Handler"
+            },
+            "FileNamePattern": "{EntityName}/Handler/{EntityName}CrudHandlers.cs",
+            "Namespace": "KernCatalog.UseCase"
+        },
+        "Request": {
+            "Type": {
+                "NamePrefix": "",
+                "NameSufix": "Request"
+            },
+            "FileNamePattern": "{EntityName}/Request/I{EntityName}CrudRequests.cs",
+            "Namespace": "KernCatalog.UseCase"
+        }
+    }
+}

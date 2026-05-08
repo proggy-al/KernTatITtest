@@ -1,0 +1,233 @@
+Проект "KernCatalog.API.App" содержит следующие ссылки на пакеты
+   [net8.0]: 
+   Пакет верхнего уровня                 Запрошено   Разрешено
+   > Tn.Sdk.Application.Web              *           0.1.9.296
+   > Tn.Sdk.Application.Web.RestApi      *           0.1.9.296
+   > Tn.Sdk.Localization                 *           0.1.9.296
+
+   Транзитивный пакет                                                Разрешено
+   > Acornima                                                        1.1.1    
+   > Asp.Versioning.Abstractions                                     8.1.0    
+   > Asp.Versioning.Http                                             8.1.0    
+   > Asp.Versioning.Mvc                                              8.1.0    
+   > Asp.Versioning.Mvc.ApiExplorer                                  8.1.0    
+   > AspNetCore.HealthChecks.NpgSql                                  8.0.2    
+   > Dapper                                                          2.1.35   
+   > EFCore.NamingConventions                                        8.0.3    
+   > FluentValidation                                                11.9.2   
+   > Jint                                                            4.2.0    
+   > Mapster                                                         7.4.0    
+   > Mapster.Core                                                    1.2.1    
+   > Microsoft.AspNetCore.Authentication.JwtBearer                   8.0.0    
+   > Microsoft.AspNetCore.JsonPatch                                  8.0.8    
+   > Microsoft.AspNetCore.Mvc.NewtonsoftJson                         8.0.8    
+   > Microsoft.CSharp                                                4.7.0    
+   > Microsoft.EntityFrameworkCore                                   8.0.8    
+   > Microsoft.EntityFrameworkCore.Abstractions                      8.0.8    
+   > Microsoft.EntityFrameworkCore.Analyzers                         8.0.8    
+   > Microsoft.EntityFrameworkCore.Relational                        8.0.8    
+   > Microsoft.Extensions.ApiDescription.Server                      6.0.5    
+   > Microsoft.Extensions.Caching.Abstractions                       8.0.0    
+   > Microsoft.Extensions.Caching.Memory                             8.0.0    
+   > Microsoft.Extensions.Configuration.Abstractions                 8.0.0    
+   > Microsoft.Extensions.DependencyInjection                        8.0.0    
+   > Microsoft.Extensions.DependencyInjection.Abstractions           8.0.2    
+   > Microsoft.Extensions.DependencyModel                            8.0.1    
+   > Microsoft.Extensions.Diagnostics.Abstractions                   8.0.1    
+   > Microsoft.Extensions.Diagnostics.HealthChecks                   8.0.19   
+   > Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions      8.0.19   
+   > Microsoft.Extensions.FileProviders.Abstractions                 8.0.0    
+   > Microsoft.Extensions.Hosting.Abstractions                       8.0.1    
+   > Microsoft.Extensions.Logging                                    8.0.0    
+   > Microsoft.Extensions.Logging.Abstractions                       8.0.3    
+   > Microsoft.Extensions.Options                                    8.0.2    
+   > Microsoft.Extensions.Primitives                                 8.0.0    
+   > Microsoft.IdentityModel.Abstractions                            7.0.3    
+   > Microsoft.IdentityModel.JsonWebTokens                           7.0.3    
+   > Microsoft.IdentityModel.Logging                                 7.0.3    
+   > Microsoft.IdentityModel.Protocols                               7.0.3    
+   > Microsoft.IdentityModel.Protocols.OpenIdConnect                 7.0.3    
+   > Microsoft.IdentityModel.Tokens                                  7.0.3    
+   > Microsoft.OpenApi                                               1.6.17   
+   > Microsoft.OpenApi.Readers                                       1.6.17   
+   > Newtonsoft.Json                                                 13.0.3   
+   > Newtonsoft.Json.Bson                                            1.0.2    
+   > Npgsql                                                          8.0.3    
+   > Npgsql.EntityFrameworkCore.PostgreSQL                           8.0.4    
+   > Npgsql.Json.NET                                                 8.0.3    
+   > Scrutor                                                         5.0.1    
+   > SharpYaml                                                       2.1.1    
+   > Swashbuckle.AspNetCore                                          6.7.0    
+   > Swashbuckle.AspNetCore.Annotations                              6.7.0    
+   > Swashbuckle.AspNetCore.Newtonsoft                               6.7.0    
+   > Swashbuckle.AspNetCore.Swagger                                  6.7.0    
+   > Swashbuckle.AspNetCore.SwaggerGen                               6.7.0    
+   > Swashbuckle.AspNetCore.SwaggerUI                                6.7.0    
+   > System.IdentityModel.Tokens.Jwt                                 7.0.3    
+   > System.Text.Encodings.Web                                       8.0.0    
+   > System.Text.Json                                                8.0.4    
+   > Tn.Sdk.Api.Rest                                                 0.1.9.296
+   > Tn.Sdk.Application                                              0.1.9.296
+   > Tn.Sdk.Core                                                     0.1.9.296
+   > Tn.Sdk.Dal                                                      0.1.9.296
+   > Tn.Sdk.Dal.EfCore                                               0.1.9.296
+   > Tn.Sdk.Dal.Mapper                                               0.1.9.296
+   > Tn.Sdk.Dal.PostgresEf                                           0.1.9.296
+   > Tn.Sdk.Dal.PostgreSql                                           0.1.9.296
+   > Tn.Sdk.Generator                                                0.1.9.296
+   > Tn.Sdk.UseCase                                                  0.1.9.296
+
+Проект "KernCatalog.Api.Rest" содержит следующие ссылки на пакеты
+   [net8.0]: 
+   Пакет верхнего уровня      Запрошено   Разрешено
+   > Tn.Sdk.Api.Rest          *           0.1.9.296
+   > Tn.Sdk.Generator         *           0.1.9.296
+   > Tn.Sdk.Localization      *           0.1.9.296
+
+   Транзитивный пакет                                           Разрешено
+   > Acornima                                                   1.1.1    
+   > Asp.Versioning.Abstractions                                8.1.0    
+   > Asp.Versioning.Http                                        8.1.0    
+   > FluentValidation                                           11.9.2   
+   > Jint                                                       4.2.0    
+   > Mapster                                                    7.4.0    
+   > Mapster.Core                                               1.2.1    
+   > Microsoft.EntityFrameworkCore                              8.0.8    
+   > Microsoft.EntityFrameworkCore.Abstractions                 8.0.8    
+   > Microsoft.EntityFrameworkCore.Analyzers                    8.0.8    
+   > Microsoft.EntityFrameworkCore.Relational                   8.0.8    
+   > Microsoft.Extensions.ApiDescription.Server                 6.0.5    
+   > Microsoft.Extensions.Caching.Abstractions                  8.0.0    
+   > Microsoft.Extensions.Caching.Memory                        8.0.0    
+   > Microsoft.Extensions.Configuration.Abstractions            8.0.0    
+   > Microsoft.Extensions.DependencyInjection                   8.0.0    
+   > Microsoft.Extensions.DependencyInjection.Abstractions      8.0.1    
+   > Microsoft.Extensions.DependencyModel                       8.0.1    
+   > Microsoft.Extensions.Logging                               8.0.0    
+   > Microsoft.Extensions.Logging.Abstractions                  8.0.0    
+   > Microsoft.Extensions.Options                               8.0.0    
+   > Microsoft.Extensions.Primitives                            8.0.0    
+   > Microsoft.OpenApi                                          1.6.17   
+   > Microsoft.OpenApi.Readers                                  1.6.17   
+   > Newtonsoft.Json                                            13.0.3   
+   > Scrutor                                                    5.0.1    
+   > SharpYaml                                                  2.1.1    
+   > Swashbuckle.AspNetCore                                     6.7.0    
+   > Swashbuckle.AspNetCore.Swagger                             6.7.0    
+   > Swashbuckle.AspNetCore.SwaggerGen                          6.7.0    
+   > Swashbuckle.AspNetCore.SwaggerUI                           6.7.0    
+   > System.Text.Encodings.Web                                  8.0.0    
+   > System.Text.Json                                           8.0.4    
+   > Tn.Sdk.Core                                                0.1.9.296
+   > Tn.Sdk.UseCase                                             0.1.9.296
+
+Проект "KernCatalog.Core" содержит следующие ссылки на пакеты
+   [net8.0]: 
+   Пакет верхнего уровня      Запрошено   Разрешено
+   > Tn.Sdk.Core              *           0.1.9.296
+   > Tn.Sdk.Generator         *           0.1.9.296
+
+   Транзитивный пакет                                           Разрешено
+   > Acornima                                                   1.1.1    
+   > FluentValidation                                           11.9.2   
+   > Jint                                                       4.2.0    
+   > Mapster                                                    7.4.0    
+   > Mapster.Core                                               1.2.1    
+   > Microsoft.Extensions.DependencyInjection.Abstractions      8.0.1    
+   > Microsoft.Extensions.DependencyModel                       8.0.1    
+   > Microsoft.OpenApi                                          1.6.17   
+   > Microsoft.OpenApi.Readers                                  1.6.17   
+   > Newtonsoft.Json                                            13.0.3   
+   > Scrutor                                                    5.0.1    
+   > SharpYaml                                                  2.1.1    
+   > System.Text.Encodings.Web                                  8.0.0    
+   > System.Text.Json                                           8.0.4    
+
+Проект "KernCatalog.Infra.PostgreSql" содержит следующие ссылки на пакеты
+   [net8.0]: 
+   Пакет верхнего уровня        Запрошено   Разрешено
+   > Tn.Sdk.Dal.Mapper          *           0.1.9.296
+   > Tn.Sdk.Dal.PostgresEf      *           0.1.9.296
+   > Tn.Sdk.Dal.PostgreSql      *           0.1.9.296
+   > Tn.Sdk.Generator           *           0.1.9.296
+   > Tn.Sdk.Localization        *           0.1.9.296
+
+   Транзитивный пакет                                                Разрешено
+   > Acornima                                                        1.1.1    
+   > AspNetCore.HealthChecks.NpgSql                                  8.0.2    
+   > Dapper                                                          2.1.35   
+   > EFCore.NamingConventions                                        8.0.3    
+   > FluentValidation                                                11.9.2   
+   > Jint                                                            4.2.0    
+   > Mapster                                                         7.4.0    
+   > Mapster.Core                                                    1.2.1    
+   > Microsoft.EntityFrameworkCore                                   8.0.8    
+   > Microsoft.EntityFrameworkCore.Abstractions                      8.0.8    
+   > Microsoft.EntityFrameworkCore.Analyzers                         8.0.8    
+   > Microsoft.EntityFrameworkCore.Relational                        8.0.8    
+   > Microsoft.Extensions.Caching.Abstractions                       8.0.0    
+   > Microsoft.Extensions.Caching.Memory                             8.0.0    
+   > Microsoft.Extensions.Configuration.Abstractions                 8.0.0    
+   > Microsoft.Extensions.DependencyInjection                        8.0.0    
+   > Microsoft.Extensions.DependencyInjection.Abstractions           8.0.2    
+   > Microsoft.Extensions.DependencyModel                            8.0.1    
+   > Microsoft.Extensions.Diagnostics.Abstractions                   8.0.1    
+   > Microsoft.Extensions.Diagnostics.HealthChecks                   8.0.19   
+   > Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions      8.0.19   
+   > Microsoft.Extensions.FileProviders.Abstractions                 8.0.0    
+   > Microsoft.Extensions.Hosting.Abstractions                       8.0.1    
+   > Microsoft.Extensions.Logging                                    8.0.0    
+   > Microsoft.Extensions.Logging.Abstractions                       8.0.3    
+   > Microsoft.Extensions.Options                                    8.0.2    
+   > Microsoft.Extensions.Primitives                                 8.0.0    
+   > Microsoft.OpenApi                                               1.6.17   
+   > Microsoft.OpenApi.Readers                                       1.6.17   
+   > Newtonsoft.Json                                                 13.0.3   
+   > Npgsql                                                          8.0.3    
+   > Npgsql.EntityFrameworkCore.PostgreSQL                           8.0.4    
+   > Npgsql.Json.NET                                                 8.0.3    
+   > Scrutor                                                         5.0.1    
+   > SharpYaml                                                       2.1.1    
+   > System.Text.Encodings.Web                                       8.0.0    
+   > System.Text.Json                                                8.0.4    
+   > Tn.Sdk.Core                                                     0.1.9.296
+   > Tn.Sdk.Dal                                                      0.1.9.296
+   > Tn.Sdk.Dal.EfCore                                               0.1.9.296
+   > Tn.Sdk.UseCase                                                  0.1.9.296
+
+Проект "KernCatalog.UseCase" содержит следующие ссылки на пакеты
+   [net8.0]: 
+   Пакет верхнего уровня      Запрошено   Разрешено
+   > Tn.Sdk.Generator         *           0.1.9.296
+   > Tn.Sdk.Localization      *           0.1.9.296
+   > Tn.Sdk.UseCase           *           0.1.9.296
+
+   Транзитивный пакет                                           Разрешено
+   > Acornima                                                   1.1.1    
+   > FluentValidation                                           11.9.2   
+   > Jint                                                       4.2.0    
+   > Mapster                                                    7.4.0    
+   > Mapster.Core                                               1.2.1    
+   > Microsoft.EntityFrameworkCore                              8.0.8    
+   > Microsoft.EntityFrameworkCore.Abstractions                 8.0.8    
+   > Microsoft.EntityFrameworkCore.Analyzers                    8.0.8    
+   > Microsoft.EntityFrameworkCore.Relational                   8.0.8    
+   > Microsoft.Extensions.Caching.Abstractions                  8.0.0    
+   > Microsoft.Extensions.Caching.Memory                        8.0.0    
+   > Microsoft.Extensions.Configuration.Abstractions            8.0.0    
+   > Microsoft.Extensions.DependencyInjection                   8.0.0    
+   > Microsoft.Extensions.DependencyInjection.Abstractions      8.0.1    
+   > Microsoft.Extensions.DependencyModel                       8.0.1    
+   > Microsoft.Extensions.Logging                               8.0.0    
+   > Microsoft.Extensions.Logging.Abstractions                  8.0.0    
+   > Microsoft.Extensions.Options                               8.0.0    
+   > Microsoft.Extensions.Primitives                            8.0.0    
+   > Microsoft.OpenApi                                          1.6.17   
+   > Microsoft.OpenApi.Readers                                  1.6.17   
+   > Newtonsoft.Json                                            13.0.3   
+   > Scrutor                                                    5.0.1    
+   > SharpYaml                                                  2.1.1    
+   > System.Text.Encodings.Web                                  8.0.0    
+   > System.Text.Json                                           8.0.4    
+   > Tn.Sdk.Core                                                0.1.9.296
+

@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "DataContext": {
+            "description": "Конфигурация контекста данных для PostgreSql.",
+            "type": "object",
+            "properties": {
+                "Host": {
+                    "type": "string",
+                    "description": "Host"
+                },
+                "Port": {
+                    "type": "integer",
+                    "description": "Port"
+                },
+                "Database": {
+                    "type": "string",
+                    "description": "Database name"
+                },
+                "Username": {
+                    "type": "string",
+                    "description": "Username"
+                },
+                "Password": {
+                    "type": "string",
+                    "description": "Password"
+                },
+                "LoadTableComposites": {
+                    "type": "boolean",
+                    "description": "LoadTableComposites"
+                },
+                "IncludeErrorDetail": {
+                    "type": "boolean",
+                    "description": "IncludeErrorDetail"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "Web": {
+            "$ref": "#/definitions/DataContext"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+--out_path
+../KernCatalog.UseCase
+--options_file
+./opt/use-case-crud-code-gen.json
+--overwrite

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Tn.Sdk.Dal.Mapper" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Dal.PostgresEf" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Dal.PostgreSql" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Generator" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Localization" VersionOverride="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KernCatalog.Core\KernCatalog.Core.csproj" />
+    <ProjectReference Include="..\KernCatalog.UseCase\KernCatalog.UseCase.csproj" />
+  </ItemGroup>
+
+</Project>

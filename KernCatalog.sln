@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernCatalog.API.App", "KernCatalog.API.App\KernCatalog.API.App.csproj", "{F56A1091-2248-463C-91BF-405D90E518B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{F34DA2DC-F8A0-42E0-B452-7C32CA06C48C}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernCatalog.Api.Rest", "KernCatalog.Api.Rest\KernCatalog.Api.Rest.csproj", "{A2DDEA16-C9E8-4B3A-92B6-1B0A2F5B72AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernCatalog.Core", "KernCatalog.Core\KernCatalog.Core.csproj", "{BE656277-4DAC-4DE8-A18A-5B549CEE4ADB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernCatalog.Infra.PostgreSql", "KernCatalog.Infra.PostgreSql\KernCatalog.Infra.PostgreSql.csproj", "{D8205D4E-0F35-4F58-900E-9F7C44BE4A59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KernCatalog.UseCase", "KernCatalog.UseCase\KernCatalog.UseCase.csproj", "{982B3D27-3436-4AEB-B28E-1E8D08D2884B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_gen", "_gen", "{D6575D41-4A54-4942-96CF-94A387FB4B96}"
+	ProjectSection(SolutionItems) = preProject
+		_gen\core-gen-all.cmd = _gen\core-gen-all.cmd
+		_gen\infra-postgresql-entity-gen.cmd = _gen\infra-postgresql-entity-gen.cmd
+		_gen\use-case-crud-gen.cmd = _gen\use-case-crud-gen.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "opt", "opt", "{BC55EDA3-0A1C-4E98-BC95-3C7981F26519}"
+	ProjectSection(SolutionItems) = preProject
+		_gen\opt\core-code-gen.json = _gen\opt\core-code-gen.json
+		_gen\opt\core-gen-all.rsp = _gen\opt\core-gen-all.rsp
+		_gen\opt\db_provider.json = _gen\opt\db_provider.json
+		_gen\opt\infra-postgresql-entity-code-gen.json = _gen\opt\infra-postgresql-entity-code-gen.json
+		_gen\opt\infra-postgresql-entity-gen.rsp = _gen\opt\infra-postgresql-entity-gen.rsp
+		_gen\opt\use-case-crud-code-gen.json = _gen\opt\use-case-crud-code-gen.json
+		_gen\opt\use-case-crud-gen.rsp = _gen\opt\use-case-crud-gen.rsp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "schema", "schema", "{B2A5332F-4F5C-4B8C-93AD-460C1853760E}"
+	ProjectSection(SolutionItems) = preProject
+		_gen\schema\code_gen.schema.json = _gen\schema\code_gen.schema.json
+		_gen\schema\dal-entity-db-gen-options-schema.json = _gen\schema\dal-entity-db-gen-options-schema.json
+		_gen\schema\use-case-entity-gen-options-schema.json = _gen\schema\use-case-entity-gen-options-schema.json
+		_gen\schema\use-case-operation-gen-options-schema.json = _gen\schema\use-case-operation-gen-options-schema.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F56A1091-2248-463C-91BF-405D90E518B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56A1091-2248-463C-91BF-405D90E518B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56A1091-2248-463C-91BF-405D90E518B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56A1091-2248-463C-91BF-405D90E518B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DDEA16-C9E8-4B3A-92B6-1B0A2F5B72AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DDEA16-C9E8-4B3A-92B6-1B0A2F5B72AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DDEA16-C9E8-4B3A-92B6-1B0A2F5B72AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DDEA16-C9E8-4B3A-92B6-1B0A2F5B72AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE656277-4DAC-4DE8-A18A-5B549CEE4ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE656277-4DAC-4DE8-A18A-5B549CEE4ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE656277-4DAC-4DE8-A18A-5B549CEE4ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE656277-4DAC-4DE8-A18A-5B549CEE4ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8205D4E-0F35-4F58-900E-9F7C44BE4A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8205D4E-0F35-4F58-900E-9F7C44BE4A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8205D4E-0F35-4F58-900E-9F7C44BE4A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8205D4E-0F35-4F58-900E-9F7C44BE4A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982B3D27-3436-4AEB-B28E-1E8D08D2884B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982B3D27-3436-4AEB-B28E-1E8D08D2884B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982B3D27-3436-4AEB-B28E-1E8D08D2884B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982B3D27-3436-4AEB-B28E-1E8D08D2884B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC55EDA3-0A1C-4E98-BC95-3C7981F26519} = {D6575D41-4A54-4942-96CF-94A387FB4B96}
+		{B2A5332F-4F5C-4B8C-93AD-460C1853760E} = {D6575D41-4A54-4942-96CF-94A387FB4B96}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2932A338-3ED2-4FB6-A33F-DBA145C26CFD}
+	EndGlobalSection
+EndGlobal

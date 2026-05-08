@@ -1,0 +1,173 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "RestApi": {
+            "description": "Конфигурация WEB приложения.",
+            "type": "object",
+            "properties": {
+                "DisableSwaggerCache": {
+                    "description": "Выключить кэш для swagger.json.",
+                    "type": "boolean"
+                },
+                "OpenApi": {
+                    "$ref": "#/definitions/RestApiOpenApi"
+                },
+                "Controller": {
+                    "$ref": "#/definitions/RestApiController"
+                },
+                "ApiVersioning": {
+                    "$ref": "#/definitions/RestApiVersioning"
+                }
+            }
+        },
+        "RestApiOpenApi": {
+            "description": "OpenApi.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения.",
+                    "type": "boolean"
+                },
+                "Contact": {
+                    "description": "Контактная информация.",
+                    "type": "object",
+                    "properties": {
+                        "Name": {
+                            "description": "Идентифицирующее имя контактного лица/организации.",
+                            "type": "string"
+                        },
+                        "Url": {
+                            "description": "URL-адрес, указывающий на контактную информацию. ДОЛЖЕН быть в формате URL-адреса.",
+                            "type": "string"
+                        },
+                        "Email": {
+                            "description": "Адрес электронной почты контактного лица/организации. ДОЛЖЕН быть в формате адреса электронной почты.",
+                            "type": "string"
+                        }
+                    }
+                },
+                "Info": {
+                    "description": "Основная информация.",
+                    "type": "object",
+                    "properties": {
+                        "Title": {
+                            "description": "Наименование приложения.",
+                            "type": "string"
+                        },
+                        "Description": {
+                            "description": "Краткое описание приложения.",
+                            "type": "string"
+                        },
+                        "Version": {
+                            "description": "Версия OpenAPI документа.",
+                            "type": "string"
+                        },
+                        "DocName": {
+                            "description": "Наименование OpenAPI документа.",
+                            "type": "string"
+                        }
+                    }
+                },
+                "BaseRoute": {
+                    "description": "Базовый путь.",
+                    "type": "string"
+                },
+                "UiRoute": {
+                    "description": "Путь к UI.",
+                    "type": [ "string", "null" ]
+                },
+                "Versioning": {
+                    "description": "Признак поддержки версий API.",
+                    "type": "boolean"
+                },
+                "Authorization": {
+                    "description": "Авторизация.",
+                    "type": "object",
+                    "properties": {
+                        "Enable": {
+                            "description": "Признак включения.",
+                            "type": "boolean"
+                        },
+                        "Type": {
+                            "enum": [ "BearerJwt" ]
+                        }
+                    }
+                }
+            }
+        },
+        "RestApiController": {
+            "description": "Настройки для REST API контроллеров.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения.",
+                    "type": "boolean"
+                },
+                "SerializationNamingStrategy": {
+                    "description": "Стратегия именования при сериализации.",
+                    "enum": [ "Default", "SnakeCase", "CamelCase", "PascalCase" ]
+                },
+                "NullValueHandling": {
+                    "description": "Обработка пустых значений.",
+                    "enum": [ "Include", "Ignore" ]
+                }
+            }
+        },
+        "RestApiVersioning": {
+            "description": "Настройки для версионности API.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения.",
+                    "type": "boolean"
+                },
+                "ReportApiVersions": {
+                    "description": "Значение, указывающее, сообщают ли запросы в ответах информацию о совместимости версий API.",
+                    "type": "boolean"
+                },
+                "ApiVersionReaderTypes": {
+                    "description": "Типы читателей для версии API.",
+                    "type": "object",
+                    "properties": {
+                        "QueryString": {
+                            "description": "Строка запроса.",
+                            "type": "boolean"
+                        },
+                        "UrlSegment": {
+                            "description": "Сегмент URL.",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "ApiExplorer": {
+                    "description": "Настройки отображения версий.",
+                    "type": "object",
+                    "properties": {
+                        "Enable": {
+                            "description": "Признак включения.",
+                            "type": "boolean"
+                        },
+                        "GroupNameFormat": {
+                            "description": "Формат, используемый для создания имен групп из версий API.",
+                            "type": "string"
+                        },
+                        "SubstitutionFormat": {
+                            "description": "Формат, используемый для форматирования значения версии API, подставляемого в шаблоны маршрутов.",
+                            "type": "string"
+                        },
+                        "SubstituteApiVersionInUrl": {
+                            "description": "Значение, указывающее, следует ли подставлять параметр версии API в шаблоны маршрутов.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "RestApi": {
+            "$ref": "#/definitions/RestApi"
+        }
+    }
+}

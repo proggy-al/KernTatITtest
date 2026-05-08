@@ -1,0 +1,16 @@
+--out_path
+../KernCatalog.Core
+--options_file
+./opt/db_provider.json
+--options_file
+./opt/core-code-gen.json
+--table
+kern_catalog.ngdu
+--table
+kern_catalog.ubr
+--table
+kern_catalog.oilfield
+--table
+kern_catalog.oilsquare
+--table
+kern_catalog.welldata

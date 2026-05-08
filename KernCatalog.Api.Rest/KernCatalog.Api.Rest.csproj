@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Tn.Sdk.Api.Rest" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Generator" VersionOverride="*" />
+    <PackageReference Include="Tn.Sdk.Localization" VersionOverride="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KernCatalog.UseCase\KernCatalog.UseCase.csproj" />
+  </ItemGroup>
+
+</Project>

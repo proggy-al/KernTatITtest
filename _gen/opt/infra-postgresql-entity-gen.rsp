@@ -1,0 +1,16 @@
+--out_path
+../KernCatalog.Infra.PostgreSql
+--options_file
+./opt/db_provider.json
+--options_file
+./opt/infra-postgresql-entity-code-gen.json
+--table
+kern_catalog.ngdu
+--table
+kern_catalog.ubr
+--table
+kern_catalog.oilfield
+--table
+kern_catalog.oilsquare
+--table
+kern_catalog.welldata

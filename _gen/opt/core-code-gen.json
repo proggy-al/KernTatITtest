@@ -1,0 +1,15 @@
+{
+    "$schema": "../schema/use-case-entity-gen-options-schema.json",
+    "CodeGen": {
+        "Entity": {
+            "Type": {
+                "NameStyle": "UpperCamelCase",
+                "NameSufix": "Entity"
+            },
+            "FileNamePattern": "{EntityName}/{TypeName}.gen.cs",
+            "ManualFileNamePattern": "{EntityName}/{TypeName}.cs",
+            "Namespace": "KernCatalog.Core",
+            "PkPropNotNull": false
+        }
+    }
+}

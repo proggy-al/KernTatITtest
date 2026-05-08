@@ -1,0 +1,15 @@
+{
+    "$schema": "../schema/dal-entity-db-gen-options-schema.json",
+    "CodeGen": {
+        "Entity": {
+            "Type": {
+                "NameStyle": "UpperCamelCase",
+                "NameSufix": "Db"
+            },
+            "FileNamePattern": "{EntityName}/{TypeName}.gen.cs",
+            "ManualFileNamePattern": "{EntityName}/{TypeName}.cs",
+            "Namespace": "KernCatalog.Infra.PostgreSql",
+            "PkPropNotNull": false
+        }
+    }
+}

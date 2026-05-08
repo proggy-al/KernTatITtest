@@ -1,0 +1,210 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "Web": {
+            "description": "Конфигурация WEB приложения.",
+            "type": "object",
+            "properties": {
+                "CorsPolicy": {
+                    "$ref": "#/definitions/WebCorsPolicy"
+                },
+                "ForwardedHeaders": {
+                    "$ref": "#/definitions/WebForwardedHeaders"
+                },
+                "PathBase": {
+                    "$ref": "#/definitions/WebPathBase"
+                },
+                "Authorization": {
+                    "$ref": "#/definitions/WebAuthorization"
+                },
+                "Logging": {
+                    "$ref": "#/definitions/WebLogging"
+                }
+            }
+        },
+        "WebCorsPolicy": {
+            "description": "Настройки поитик CORS.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения.",
+                    "type": "boolean"
+                },
+                "AllowAnyHeader": {
+                    "description": "Гарантирует, что политика разрешает использование любого заголовка.",
+                    "type": "boolean"
+                },
+                "AllowAnyMethod": {
+                    "description": "Гарантирует, что политика допускает любой метод.",
+                    "type": "boolean"
+                },
+                "AllowAnyOrigin": {
+                    "description": "Гарантирует, что политика допускает любое происхождение.",
+                    "type": "boolean"
+                },
+                "AllowCredentials": {
+                    "description": "Устанавливает политику, разрешающую использование учетных данных.",
+                    "type": "boolean"
+                }
+            }
+        },
+        "WebForwardedHeaders": {
+            "description": "Настройки для ForwardedHeaders.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения",
+                    "type": "boolean"
+                },
+                "ForwardedHeaders": {
+                    "description": "Определяет, какие отправители должны быть обработаны.",
+                    "type": "array",
+                    "items": [
+                        {
+                            "enum": [ "None", "XForwardedFor", "XForwardedHost", "XForwardedProto", "XForwardedPrefix", "All" ],
+                            "description": "Флаг для управления тем, какие отправители обрабатываются."
+                        }
+                    ]
+                }
+            }
+        },
+        "WebLogging": {
+            "description": "Настройки для Logging.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения",
+                    "type": "boolean"
+                },
+                "Http": {
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                        "LoggingFields": {
+                            "description": "Определяет, какие поля должны быть включены.",
+                            "type": "array",
+                            "items": [
+                                {
+                                    "enum": [
+                                        "None",
+                                        "RequestPath",
+                                        "RequestQuery",
+                                        "RequestProtocol",
+                                        "RequestMethod",
+                                        "RequestScheme",
+                                        "ResponseStatusCode",
+                                        "RequestHeaders",
+                                        "ResponseHeaders",
+                                        "RequestTrailers",
+                                        "ResponseTrailers",
+                                        "RequestBody",
+                                        "ResponseBody",
+                                        "Duration",
+                                        "RequestProperties",
+                                        "RequestPropertiesAndHeaders",
+                                        "ResponsePropertiesAndHeaders",
+                                        "Request",
+                                        "Response",
+                                        "All"
+                                    ],
+                                    "description": "Флаг для управления тем, какие поля должны быть включены."
+                                }
+                            ]
+                        },
+                        "LoggingFieldsExt": {
+                            "description": "Определяет, какие дополнительные поля должны быть включены.",
+                            "type": "array",
+                            "items": [
+                                {
+                                    "enum": [
+                                        "None",
+                                        "ConnectionRemoteIp",
+                                        "ConnectionRemotePort",
+                                        "User",
+                                        "All"
+                                    ],
+                                    "description": "Флаг для управления тем, какие дополнительные поля должны быть включены."
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "WebPathBase": {
+            "description": "Настройки базового пути для приложения.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения",
+                    "type": "boolean"
+                },
+                "Path": {
+                    "description": "Базовый путь.",
+                    "type": "string"
+                }
+            }
+        },
+        "WebAuthorization": {
+            "description": "Настройки авторизации для приложения.",
+            "type": "object",
+            "properties": {
+                "Enable": {
+                    "description": "Признак включения",
+                    "type": "boolean"
+                },
+                "AuthenticationScheme": {
+                    "description": "Схема аутентификации.",
+                    "enum": [ "JwtBearer" ]
+                },
+                "JwtBearer": {
+                    "description": "Опции JWT Bearer.",
+                    "type": "object",
+                    "properties": {
+                        "Authority": {
+                            "description": "",
+                            "type": "string"
+                        },
+                        "TokenValidation": {
+                            "description": "Параметры проверки токена.",
+                            "type": "object",
+                            "properties": {
+                                "ClockSkew": {
+                                    "description": "Смещение часов, применяемое при проверке времени, в секундах.",
+                                    "type": "integer"
+                                },
+                                "ValidateIssuer": {
+                                    "description": "Логическое значение для контроля того, будет ли проверен issuer во время проверки токена.",
+                                    "type": "boolean"
+                                },
+                                "ValidateAudience": {
+                                    "description": "Логическое значение для контроля того, будет ли проверен audience во время проверки токена.",
+                                    "type": "boolean"
+                                },
+                                "ValidAudience": {
+                                    "description": "Строка, представляющая допустимую audience, которая будет использоваться для проверки на соответствие audience токена.",
+                                    "type": "string"
+                                },
+                                "ValidateIssuerSigningKey": {
+                                    "description": "Признак валидации ключа безопасности.",
+                                    "type": "boolean"
+                                },
+                                "ValidateSignature": {
+                                    "description": "Признак валидации сигнатуры токена.",
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    },
+    "type": "object",
+    "properties": {
+        "Web": {
+            "$ref": "#/definitions/Web"
+        }
+    }
+}

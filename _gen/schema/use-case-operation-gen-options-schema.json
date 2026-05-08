@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "CodeGen": {
+            "type": "object",
+            "title": "Генерация кода C#.",
+            "description": "Настройки генерации кода C#.",
+            "properties": {
+                "Type": {
+                    "$ref": "code_gen.schema.json#/definitions/CodeGenType",
+                    "title": "Опции генерации типа.",
+                    "description": "Опции генерации типа."
+                },
+                "Namespace": {
+                    "type": "string",
+                    "title": "Пространство имен в коде C# для сущности.",
+                    "description": "Пространство имен в коде C# для сущности. Допускаются макросы: {EntityName}, {TypeName}."
+                },
+                "FileNamePattern": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "title": "Шаблон имени выходного генерируемого файла для сущности.",
+                    "description": "Шаблон имени выходного файла для сущности. Допускаются макросы: {EntityName}, {TypeName}, {Namespace}.",
+                    "default": "{TypeName}.gen.cs"
+                },
+                "Skip": {
+                    "type": "boolean",
+                    "description": "Признак пропуска раздела при генерации.",
+                    "default": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "CodeGenAll": {
+            "type": "object",
+            "title": "Генерация кода C#.",
+            "description": "Настройки генерации кода C#.",
+            "properties": {
+                "Configuration": {
+                    "$ref": "#/definitions/CodeGen"
+                },
+                "Operation": {
+                    "$ref": "#/definitions/CodeGen"
+                },
+                "OperationHandler": {
+                    "$ref": "#/definitions/CodeGen"
+                },
+                "Request": {
+                    "$ref": "#/definitions/CodeGen"
+                }
+            },
+            "additionalProperties": false
+        },
+        "OperationType": {
+            "type": "string",
+            "enum": [
+                "Create",
+                "CreateMany",
+                "Read",
+                "ReadMany",
+                "Update",
+                "UpdateMany",
+                "Delete",
+                "DeleteMany"
+            ],
+            "description": "Тип операции с сущностью."
+        },
+        "Entity": {
+            "type": "object",
+            "description": "Сущность для генерации операций.",
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "description": "Наименование сущности."
+                },
+                "TypeName": {
+                    "type": "string",
+                    "description": "Наименование C# типа сущности."
+                },
+                "Operations": {
+                    "type": "array",
+                    "description": "Список операций для сущности.",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/definitions/OperationType"
+                    }
+                }
+            }
+        },
+        "EntityList": {
+            "type": "array",
+            "description": "Список сущностей для генерации операций.",
+            "items": {
+                "$ref": "#/definitions/Entity"
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "OutPath": {
+            "type": "string",
+            "description": "Путь для сгенерированных файлов."
+        },
+        "CodeGen": {
+            "$ref": "#/definitions/CodeGenAll"
+        },
+        "Entities": {
+            "$ref": "#/definitions/EntityList"
+        },
+        "OverwriteFiles": {
+            "type": "boolean",
+            "description": "Признак перезаписи файлов."
+        }
+    }
+}
